@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1749015555 source:c:\users\rferr\onedrive\documentos\c++ comienzo\juego1\main.cpp
+	<iostream>
+	<stdio.h>
+	<windows.h>
+	<conio.h>
+	<../Nave.h>
+
+1749015200 source:c:\users\rferr\onedrive\documentos\c++ comienzo\juego1\src\nave.cpp
+	"../Nave.h"
+
+1749010709 c:\users\rferr\onedrive\documentos\c++ comienzo\juego1\include\nave.h
+
+1749016172 c:\users\rferr\onedrive\documentos\c++ comienzo\juego1\nave.h
+	<conio.h>
+	<windows.h>
+	<stdio.h>
+
