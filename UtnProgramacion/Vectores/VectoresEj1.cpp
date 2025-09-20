@@ -1,6 +1,10 @@
 #include <iostream>
 using namespace std;
 
+/*
+1. Ingresar un valor N (< 25). Generar un arreglo de N componentes en el cual las mismas
+contengan los primeros números naturales pares e imprimirlo.
+*/
 int main()
 {
     int N;
