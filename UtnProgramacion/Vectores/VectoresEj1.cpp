@@ -12,15 +12,15 @@ int main()
     cout << "Ingrese un valor N para el tamaño del vector: " << endl;
     cin >> N;
 
-    int myVector[N];
+    int arreglo[N];
     for (int i = 0; i < N; i++)
     {
-        i == 0 ? myVector[i] = i : myVector[i] = 2 * i;
+        i == 0 ? arreglo[i] = i : arreglo[i] = 2 * i;
     }
 
     for (int i = 0; i < N / 2; i++)
     {
-        cout << myVector[i] << endl;
+        cout << arreglo[i] << endl;
     }
 
     return 0;
