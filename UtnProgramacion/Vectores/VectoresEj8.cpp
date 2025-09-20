@@ -17,6 +17,46 @@ void cargarVector(int arreglo[], int n)
     }
 }
 
+void mostrarPorLinea(int arreglo[], int n)
+{
+    for (int i = n - 1; i >= 0; i--)
+    {
+        cout << arreglo[i] << endl;
+    }
+}
+
+void mostrarDiezPorLinea(int arreglo[], int n)
+{
+    int iteracion = 1;
+    for (int i = n - 1; i >= 0; i--)
+    {
+        cout << arreglo[i] << " ";
+
+        if (iteracion == 10)
+        {
+            cout << endl;
+            iteracion = 0;
+        }
+        iteracion++;
+    }
+}
+
+void mostrarCincoPorLineaConPosicion(int arreglo[], int n)
+{
+    int iteracion = 1;
+    for (int i = n - 1; i >= 0; i--)
+    {
+        cout << "(" << arreglo[i] << "," << i << ")" << " ";
+
+        if (iteracion == 5)
+        {
+            cout << endl;
+            iteracion = 0;
+        }
+        iteracion++;
+    }
+}
+
 int main(int argc, char const *argv[])
 {
     int N;
@@ -27,10 +67,14 @@ int main(int argc, char const *argv[])
     int arregloGG[N];
     cargarVector(arregloGG, N);
 
-    for (int i = N - 1; i >= 0; i--)
-    {
-        cout << arregloGG[i] << endl;
-    }
+    mostrarPorLinea(arregloGG, N); // a
+
+    cout << endl;
+    mostrarDiezPorLinea(arregloGG, N); // b
+    cout << endl;
+
+    cout << endl;
+    mostrarCincoPorLineaConPosicion(arregloGG, N); // c
 
     return 0;
 }
