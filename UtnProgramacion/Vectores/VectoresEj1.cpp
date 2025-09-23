@@ -7,20 +7,23 @@ contengan los primeros números naturales pares e imprimirlo.
 */
 int main()
 {
+    // ingresar un numero N;
+
     int N;
 
-    cout << "Ingrese un valor N para el tamaño del vector: " << endl;
+    cout << "Ingresar un valor N: ";
     cin >> N;
 
-    int arreglo[N];
+    int vector[N];
+
     for (int i = 0; i < N; i++)
     {
-        i == 0 ? arreglo[i] = i : arreglo[i] = 2 * i;
+        vector[i] = 2 * i;
     }
 
-    for (int i = 0; i < N / 2; i++)
+    for (int i = 0; i < N; i++)
     {
-        cout << arreglo[i] << endl;
+        cout << vector[i] << endl;
     }
 
     return 0;
