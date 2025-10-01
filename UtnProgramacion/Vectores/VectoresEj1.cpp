@@ -1,29 +1,47 @@
 #include <iostream>
 using namespace std;
 
-/*
-1. Ingresar un valor N (< 25). Generar un arreglo de N componentes en el cual las mismas
-contengan los primeros números naturales pares e imprimirlo.
+/* 2. Ingresar un valor entero N (< 30) y a continuación un conjunto de N elementos. Si el último
+    elemento del conjunto tiene un valor menor que 10 imprimir los negativos y en caso contrario los
+    demás.
 */
+
 int main()
 {
-    // ingresar un numero N;
 
     int N;
 
-    cout << "Ingresar un valor N: ";
+    cout << "ingrese un valor N" << endl;
     cin >> N;
 
-    int vector[N];
-
+    // vector cargado
+    int arreglo[N];
     for (int i = 0; i < N; i++)
     {
-        vector[i] = 2 * i;
+        cout << "ingrese valores " << endl;
+        cin >> arreglo[i];
     }
 
-    for (int i = 0; i < N; i++)
+    int ultimo = arreglo[N - 1];
+    if (ultimo < 10)
     {
-        cout << vector[i] << endl;
+        for (int iteracion = 0; iteracion < N; iteracion++)
+        {
+            if (arreglo[iteracion] < 0)
+            {
+                cout << arreglo[iteracion];
+            }
+        }
+    }
+    else
+    {
+        for (int i = 0; i < N; i++)
+        {
+            if (arreglo[i] > 0)
+            {
+                cout << arreglo[i];
+            }
+        }
     }
 
     return 0;
