@@ -63,7 +63,6 @@ int main()
 
     cout << endl;
     cout << "Cant. General de series: " << totalGeneralDeSeries << endl;
-    ;
 
     return 0;
 }
