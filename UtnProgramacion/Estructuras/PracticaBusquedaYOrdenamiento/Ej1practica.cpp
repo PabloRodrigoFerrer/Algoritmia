@@ -48,8 +48,7 @@ void OrdernarBoletas(Boleta boletas[], int n, Boleta vecOrdenado[])
 {
     for (int i = 0; i < n; i++)
     {
-        vecOrdenado[boletas[i].numeroLegajo - 80001].numeroLegajo = boletas[i].numeroLegajo;
-        vecOrdenado[boletas[i].numeroLegajo - 80001].apellido = boletas[i].apellido;
+        vecOrdenado[boletas[i].numeroLegajo - 80001] = boletas[i];
     }
 }
 
@@ -59,8 +58,6 @@ int main()
     Boleta boletas[100];
     CargarBoletas(boletas);
     OrdernarBoletas(boletas, 100, vecOrdenado);
-
-    cout << vecOrdenado[14].numeroLegajo;
 
     return 0;
 }
