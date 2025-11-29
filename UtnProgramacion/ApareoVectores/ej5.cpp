@@ -16,12 +16,6 @@ struct infoDiscos
     string NombreBanda;
 };
 
-struct ReporteBanda
-{
-    string Nombre;
-    int Cantidad;
-};
-
 int BuscarPorId(infoDiscos discos[], int n, string valorID)
 {
     int inicio, final, mitad;
@@ -92,24 +86,13 @@ void ConsolidarVentas(Venta ventas[], int n, Venta vecConsolidar[], int &m)
     }
 }
 
-void GenerarReporte(Venta vecConsolidado[], int n,
-                    ReporteBanda vecBandas[], int m,
-                    infoDiscos maestroDiscos[], int k)
+void GenerarReporte(Venta vecConsolidado[], int n, infoDiscos maestroDiscos[], int k)
 {
-
     int pos;
     for (int i = 0; i < n; i++)
     {
         pos = BuscarPorId(maestroDiscos, k, vecConsolidado[i].id);
-        vecBandas[i].Nombre = maestroDiscos[pos].NombreBanda;
-        vecBandas[i].Cantidad = vecConsolidado[i].cantidad;
-    }
-
-    // imprimir bandas
-
-    for (int i = 0; i < m; i++)
-    {
-        cout << "Banda: " << vecBandas[i].Nombre << " Cantidad: " << vecBandas[i].Cantidad << endl;
+        cout << "Banda:" << maestroDiscos[pos].NombreBanda << " Cantidad: " << vecConsolidado[i].cantidad << endl;
     }
 }
 
@@ -151,8 +134,7 @@ int main()
     // genero vectorConsolidado
     ConsolidarVentas(ventasFlatten, k, vecConsolidado, m);
 
-    ReporteBanda reportesBandas[m];
-    GenerarReporte(vecConsolidado, m, reportesBandas, m, maestroDiscos, 6);
+    GenerarReporte(vecConsolidado, m, maestroDiscos, 6);
 
     return 0;
 }
